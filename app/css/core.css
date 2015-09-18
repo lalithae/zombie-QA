@@ -1,14 +1,69 @@
 /* CSS declarations go here */
 
+.site-nav{
+	background: black !important;
+	-moz-border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+	border-radius: 0px !important;
+	border-color: black !important;
+}
+
+@media (min-width: 768px){
+	.navbar {
+		-moz-border-radius: 0px !important;
+		-webkit-border-radius: 0px !important;
+		border-radius: 0px !important;
+	}
+}
+.site-nav  .navbar-nav>li>a{
+	color: #DCDCDC !important;
+}
 #search-wrap{
-	padding: 55px 0px;
+	padding: 55px 10px;
 	background: #6c71c4;
 	color: #fff;
+	background-image: url("http://7-themes.com/data_images/out/76/7034141-chicago-city-wallpaper-for-desktop.jpg");
+}
+#search-wrap-inner{
+    background: rgba(0, 0, 0, 0.6);
+	padding: 0px 20px;
+
+}
+
+#search-wrap-inner .title-wrap{
+	padding: 25px 0px;
 }
 
 #search-wrap small{
-	color: #DCDCDC
+	color: #DCDCDC;
 }
 #search-wrap input{
 	height: 55px;
+}
+
+#user-links{
+	padding: 40px 0px;
+}
+
+.user-links-wrap{
+	padding: 0px 0px 30px 0px;
+}
+#user-links .qa-btn{
+	border: 1px solid #999;
+	padding: 20px 50px;
+	color: #fff;
+	font-size: 1.6em;
+	border-radius: 2px;
+	text-decoration: none !important;
+	display: inline-block;
+    width: 275px;
+    margin: 10px 20px;
+}
+
+#user-links .qa-btn:HOVER{
+	border-color: green;
+}
+
+.pointer{
+	cursor: pointer;
 }

@@ -3,7 +3,8 @@
   
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/core.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/core.css">
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
@@ -13,7 +14,7 @@
 
 <body>
 	<!--navbar-start-->
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default site-nav">
 		<div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -44,35 +45,51 @@
 	<!--search-container-start-->
 	<div class = "container-fluid">
 		<div class = "row">
+			
 			<div id = "search-wrap">
-				<div class = "row">
-					<div class = "container">
-						<h1>Ask us a question <small>the only stupid question is the one left unasked</small></h1>
+				<div id = "search-wrap-inner">
+					<!--search-title-start-->
+					<div class = "row">
+						<div class = "container title-wrap">
+							<h1 class = "text-center">Ask us a question <small>the only stupid question is the one left unasked</small></h1>
+						</div>
 					</div>
-				</div>
-				<div class = "row">
-					<div class = "container">
-						<form>
-							<div class="input-group">
-								<input type="text" class="form-control" placeholder="try: 'How to bench press'" aria-describedby="basic-addon2">
-								<span class="input-group-addon" id="basic-addon2">Search for a Question</span>
+					<!--search-title-end-->
+					
+					<!--search-input-start-->
+					<div class = "row">
+						<div class = "container">
+							<form>
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="try: 'How to bench press'" aria-describedby="basic-addon2">
+									<span class="input-group-addon" id="basic-addon2">Search for a Question</span>
+								</div>
+							</form>
+						</div>
+					</div>
+					<!--search-input-end-->
+					
+					<!--user-links-start-->
+					<div class = "row">
+						<div class = "container user-links-wrap">
+							<div class = "row">
+								<div id = "user-links">
+									<div class = "col-md-12 text-center">
+										<a class = "qa-btn pointer">Log in <i class="fa fa-sign-in"></i></a>
+										<a class = "qa-btn pointer">Register Now <i class="fa fa-users"></i></a>
+									</div>						
+								</div>
 							</div>
-						</form>
+						</div>
 					</div>
+					<!--user-links-end-->
 				</div>
 			</div>
 		</div>
 	</div>
 	<!--search-container-start-->  
 	
-	<!--user-links-start-->
-	<div class = "container-fluid">
-		<div class = "row">
-			<div class = "col-md-6"></div>
-			<div class = "col-md-6"></div>
-		</div>
-	</div>
-	<!--user-links-end-->
+
 	
 </body>
 
