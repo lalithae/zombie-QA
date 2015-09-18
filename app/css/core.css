@@ -1,0 +1,14 @@
+/* CSS declarations go here */
+
+#search-wrap{
+	padding: 55px 0px;
+	background: #6c71c4;
+	color: #fff;
+}
+
+#search-wrap small{
+	color: #DCDCDC
+}
+#search-wrap input{
+	height: 55px;
+}
