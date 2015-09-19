@@ -1,0 +1,6 @@
+$: meteor add accounts-password  //password support for accounts
+$: meteor add accounts-google  //login service for google
+$: meteor add accounts-facebook //login service for FB
+$: meteor add service-configuration //Configure login services
+
+FYI: https://atmospherejs.com/packages/accounts
