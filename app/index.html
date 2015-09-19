@@ -75,8 +75,10 @@
 							<div class = "row">
 								<div id = "user-links">
 									<div class = "col-md-12 text-center">
-										<a class = "qa-btn pointer">Log in <i class="fa fa-sign-in"></i></a>
-										<a class = "qa-btn pointer">Register Now <i class="fa fa-users"></i></a>
+									
+											{{>login}}
+											
+										
 									</div>						
 								</div>
 							</div>
@@ -98,43 +100,61 @@
 			</div>
 		</div>
 		
-		<div class = "row">
-			<div class = "">
+		<div class = "row latest-question-wrap">
 			<div class = "container">
-				<div class = "col-md-4">
-					<div class = "question-wrap">
-						<p><i class="fa fa-question-circle"></i> How to rob a bank in broad day light.</p>
-						<p><a href = "#" class = "pull-right">answer</a></p>	
-					</div>
-				</div>
-				
-				<div class = "col-md-4">
-					<div class = "question-wrap">
-						<p><i class="fa fa-question-circle"></i> How to cook a Chicago style pizza.</p>
-						<p><a href = "#" class = "pull-right">answer</a></p>	
-					</div>
-				</div>	
-
-				<div class = "col-md-4">
-					<div class = "question-wrap">
-						<p><i class="fa fa-question-circle"></i> Kill the president and get away with it.</p>
-						<p><a href = "#" class = "pull-right">answer</a></p>	
-					</div>
-				</div>				
-			</div>
-			</div>
+				<ul class="list-group row">
+					<li class="list-group-item col-md-4">
+						<div class = "question-wrap">
+							<p><i class="fa fa-question-circle"></i> How to rob a bank in broad day light.</p>
+							<p><a href = "#" class = "pull-right">answer</a></p>	
+						</div>
+					</li>
+					<li class="list-group-item col-md-4">
+						<div class = "question-wrap">
+							<p><i class="fa fa-question-circle"></i> How to rob a bank in broad day light.</p>
+							<p><a href = "#" class = "pull-right">answer</a></p>	
+						</div>					
+					</li>
+					<li class="list-group-item col-md-4">
+						<div class = "question-wrap">
+							<p><i class="fa fa-question-circle"></i> How to rob a bank in broad day light.</p>
+							<p><a href = "#" class = "pull-right">answer</a></p>	
+						</div>
+					</li>
+					<li class="list-group-item col-md-4">
+						<div class = "question-wrap">
+							<p><i class="fa fa-question-circle"></i> How to rob a bank in broad day light.</p>
+							<p><a href = "#" class = "pull-right">answer</a></p>	
+						</div>
+					</li>
+					<li class="list-group-item col-xs-4">
+						<div class = "question-wrap">
+							<p><i class="fa fa-question-circle"></i> How to rob a bank in broad day light.</p>
+							<p><a href = "#" class = "pull-right">answer</a></p>	
+						</div>
+					</li>
+				</ul>
+			</div>		
 		</div>
 	</div>
 	<!--Latest-questions-end-->
 	
+
+	 
+	
+	
 </body>
 
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="login">
+    {{#if currentUser}}
+		<a id="logout" class = "qa-btn pointer" style = "width: 215px;">Sign out <i class="fa fa-sign-out"></i></a>
+    {{else}}
+        <a class = "qa-btn pointer" id = "facebook-login">facebook login <i class="fa fa-sign-in"></i></a>
+		<a class = "qa-btn pointer" id = "gmail-login">g+ login <i class="fa fa-sign-in"></i></a>
+		<a class = "qa-btn pointer" id = "zombie-login">Zombie login <i class="fa fa-sign-in"></i></a>
+		<a class = "qa-btn pointer" id = "zombie-register">Register <i class="fa fa-users"></i></a>
+    {{/if}}
 </template>
-
-
 
 
