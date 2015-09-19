@@ -1,0 +1,10 @@
+db.question.insert({
+Question: 'how to bench press ',
+answer1: 'google it ',
+Createdby: 'ayesh',
+Createdon: '2015-09-19',
+modby: 'Lalitha',
+isedited: '1',
+editedon: '2015-09-19',
+}
+)
