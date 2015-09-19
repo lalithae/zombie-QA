@@ -35,7 +35,6 @@
 				<ul class="nav navbar-nav">
 					<li><a href="#">All Questions</a></li>
 					<li><a href="#">Popular Questions</a></li>
-					<li><a href="#">FAQ</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
@@ -103,36 +102,11 @@
 		<div class = "row latest-question-wrap">
 			<div class = "container">
 				<ul class="list-group row">
-					<li class="list-group-item col-md-4">
-						<div class = "question-wrap">
-							<p><i class="fa fa-question-circle"></i> How to rob a bank in broad day light.</p>
-							<p><a href = "#" class = "pull-right">answer</a></p>	
-						</div>
-					</li>
-					<li class="list-group-item col-md-4">
-						<div class = "question-wrap">
-							<p><i class="fa fa-question-circle"></i> How to rob a bank in broad day light.</p>
-							<p><a href = "#" class = "pull-right">answer</a></p>	
-						</div>					
-					</li>
-					<li class="list-group-item col-md-4">
-						<div class = "question-wrap">
-							<p><i class="fa fa-question-circle"></i> How to rob a bank in broad day light.</p>
-							<p><a href = "#" class = "pull-right">answer</a></p>	
-						</div>
-					</li>
-					<li class="list-group-item col-md-4">
-						<div class = "question-wrap">
-							<p><i class="fa fa-question-circle"></i> How to rob a bank in broad day light.</p>
-							<p><a href = "#" class = "pull-right">answer</a></p>	
-						</div>
-					</li>
-					<li class="list-group-item col-xs-4">
-						<div class = "question-wrap">
-							<p><i class="fa fa-question-circle"></i> How to rob a bank in broad day light.</p>
-							<p><a href = "#" class = "pull-right">answer</a></p>	
-						</div>
-					</li>
+				
+					{{#each questions}}
+						{{> question}}
+					{{/each}}
+					
 				</ul>
 			</div>		
 		</div>
@@ -220,6 +194,15 @@
 		<a class = "qa-btn pointer" id = "zombie-login" data-toggle="modal" data-target="#signin">Zombie login <i class="fa fa-sign-in"></i></a>
 		<a class = "qa-btn pointer" id = "zombie-register" data-toggle="modal" data-target="#signup">Register <i class="fa fa-users"></i></a>
     {{/if}}
+</template>
+
+<template name="question">
+	<li class="list-group-item col-md-4">
+		<div class = "question-wrap">
+			<p><i class="fa fa-question-circle"></i> {{questionSummary}}</p>
+			<p><a href = "#" class = "pull-right">answer</a></p>	
+		</div>
+	</li>
 </template>
 
 

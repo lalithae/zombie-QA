@@ -1,49 +1,58 @@
 
+Questions = new Mongo.Collection("questions");
 
 if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
 
 
-
-  Template.body.events({
-	'submit #zombieSignup': function(event){
-		event.preventDefault();
-		var email = event.target.signUpEmail.value;
-		var passOne = event.target.passOne.value;
-		var passTwo = event.target.passTwo.value;
+	Template.body.helpers({
+		questions: function () {
 		
-		if(passOne != passTwo){
-			$('#signup-msg').text("Passwords do not match");
-			return false;
+			var startDate = new Date();
+			startDate.setDate(startDate.getDate()-5);
+			return Questions.find({"crton": {$gte: startDate}});
 		}
-		
-		Accounts.createUser({
-			email: email,
-			password: passOne
-		}, function(err){		
-			if(err != null)
-				$('#signup-msg').text(err.reason);
-			else
-				$('#signup').modal('hide');
-		});
-	}, 
+	});
+
+	Template.body.events({
+		'submit #zombieSignup': function(event){
+			event.preventDefault();
+			var email = event.target.signUpEmail.value;
+			var passOne = event.target.passOne.value;
+			var passTwo = event.target.passTwo.value;
+
+			if(passOne != passTwo){
+				$('#signup-msg').text("Passwords do not match");
+				return false;
+			}
+
+			Accounts.createUser({
+				email: email,
+				password: passOne
+			}, function(err){		
+				if(err != null)
+					$('#signup-msg').text(err.reason);
+				else
+					$('#signup').modal('hide');
+			});
+		}, 
 	
-	'submit #zombieSignin': function(event){
-		event.preventDefault();
-		var email = event.target.signinEmail.value;
-		var passOne = event.target.signinPass.value;
-		
-		var user = {"email":email};
-		Meteor.loginWithPassword(user, passOne, function(err){
-			if(err != null)
-				$('#signin-msg').text(err.reason);
-			else
-				$('#signin').modal('hide');
-		});
-	}
-	
-  });
+		'submit #zombieSignin': function(event){
+			event.preventDefault();
+			var email = event.target.signinEmail.value;
+			var passOne = event.target.signinPass.value;
+
+			var user = {"email":email};
+			Meteor.loginWithPassword(user, passOne, function(err){
+				if(err != null)
+					$('#signin-msg').text(err.reason);
+				else
+					$('#signin').modal('hide');
+			});
+		}
+
+	});
   
 
   
